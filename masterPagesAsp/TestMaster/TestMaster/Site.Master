@@ -1,0 +1,68 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="TestMaster.Site" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>The Contactlist</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <script src="Scripts/jquery-1.9.1.js"></script>
+    <script src="Scripts/bootstrap.js"></script>
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+    <table style="width: 100%;">
+        <tr>
+            <td colspan="3" class="main_header">
+                <nav class="navbar navbar-inverse">
+                    <div class="container-fluid">
+                        <div class="navbar-header">
+                            <a class="navbar-brand" href="#">The Contactlist</a>
+                        </div>
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="/index.aspx">Home</a></li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                    Contact
+                                    <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="./AddContact.aspx">Add Contact</a></li>
+                                    <li><a href="./EditContact.aspx">View And Edit</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Adress</a></li>
+                            <li><a href="#">Phone</a></li>
+                        </ul>
+                    </div>
+                </nav>
+
+                <asp:ContentPlaceHolder ID="ContentPlaceHolderHeader" runat="server"></asp:ContentPlaceHolder>
+            </td>
+        </tr>
+        <tr>
+            <td class="main_left">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolderLeft" runat="server"></asp:ContentPlaceHolder>
+            </td>
+                                
+            <td>
+
+
+            </td>
+            <td class="main_main">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolderMain" runat="server"></asp:ContentPlaceHolder>
+                
+            </td>
+            <td class="main_right">
+
+
+            </td>
+        </tr>
+        <tr>
+            <td class="main_footer" colspan="3">
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
